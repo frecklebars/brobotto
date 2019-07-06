@@ -1,5 +1,7 @@
 import discord
 import numpy as np
+import brolines
+
 
 ftoken = open("token/_token.txt", 'r')
 TOKEN = ftoken.read()
@@ -16,18 +18,14 @@ async def on_message(message):
     
     #PREFIXED COMMANDS
     if message.content.startswith(prefix):
-        msg = message.content
+        msg = message.content.lower()
         msg = msg.replace(prefix, "")
         
         if msg == "hello":
             await message.channel.send("hello!")
             return
-        
-        if msg == "see you later alligator":
-            await message.channel.send("in a while crocodile")
-            return
             
-        elif msg == "color":
+        if msg == "color":
             rgb = [np.random.randint(0, 256) for i in range(3)]
             linkrgb = ""
             rgbvalstr = "rgb("
@@ -47,17 +45,58 @@ async def on_message(message):
             await message.channel.send("https://www.color-hex.com/color/" + linkrgb)
             return
         
-    if message.content:
+        if msg == "isepic":
+            await message.channel.send("what is epic?")
+            return
+        if msg.startswith("isepic"):
+            chance = np.random.randint(0,2)
+            if chance == 1:
+                await message.channel.send("ok this is epic")
+                return
+            else:
+                await message.channel.send("ok this is not epic")
+                return
+        
+            
+    #NON PREFIXED
+    msg = message.content.lower()
+    if msg == "see you later alligator":
+            await message.channel.send("in a while crocodile")
+            return
+        
+    if (msg.find("pee") >=0) or (msg.find("poo") >=0):
+        msg = msg.split(" ")
+        if "pee" in msg:
+            await message.channel.send("poo")
+            return
+        if "poo" in msg:
+            await message.channel.send("pee")
+        return
+    
+    if msg.find(":)") >= 0:
+        await message.channel.send(":)")
+            
+    if msg.find("bro") >= 0:
+        ochance = np.random.randint(0, 5)
+        dotchance = np.random.randint(0, 15)
+        if np.random.randint(0, 100) < 30:
+            await message.channel.send("bro" + "o" * ochance + "." * dotchance)
+        return
+
+
+    #LAST
+    if msg:
         check = np.random.randint(0,100)
         if check < 5:
-            await message.channel.send("why are you like this") #i dont know man i swear im trying,
-
+            line = np.random.randint(0, len(brolines.quotes))
+            await message.channel.send(brolines.quotes[line])
+        return
 
 @client.event
 async def on_ready():
-    print("logged in as:")
-    print(client.user.name)
-    print(client.user.id)
-    print("-------------")
+    print("logged in as: " + str(client.user.name))
+    print("id: " + str(client.user.id))
+    print("----------------------")
+    print("yep, it's bro time")
     
 client.run(TOKEN)

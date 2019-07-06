@@ -8,12 +8,14 @@ command | description
 --- | ---
 b! | prefix used
 hello | says `hello!` back
-see you later alligator | says `in a while crocodile`
 color | returns a random color
+isepic | tells you if something is epic or na
   
   
 ### other features:
 * has a 5% chance of saying `why are you like this`
+* will brighten ur day if you type `:)`
+* replies to your `bro`s like the real bro he is
 * is cool B)
   
   
