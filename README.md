@@ -8,6 +8,8 @@ command | description
 --- | ---
 b! | prefix used
 hello | says `hello!` back
+see you later alligator | says `in a while crocodile`
+color | returns a random color
   
   
 ### other features:
