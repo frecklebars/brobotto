@@ -57,7 +57,7 @@ async def on_message(message):
                 await message.channel.send("ok this is not epic")
                 return
             
-        if msg == "bruh":
+        if msg == "bruh" or msg == "bruh moment":
             await message.channel.send(file = discord.File("bruh.jpg"))
             await message.channel.send("bruh")
         
