@@ -60,6 +60,23 @@ async def on_message(message):
         if msg == "bruh" or msg == "bruh moment":
             await message.channel.send(file = discord.File("bruh.jpg"))
             await message.channel.send("bruh")
+            
+        if msg == "pokemon":
+            await message.channel.send("https://pokemondb.net/pokedex/" + str(np.random.randint(1, 810)))
+            return
+        if msg.startswith("pokemon "):
+            msg = msg.replace("pokemon ", "")
+            if msg == "gen":
+                await message.channel.send("you need to specify a generation from 1 to 8\nfor example `b!pokemon gen 4`")
+                return
+            if msg.startswith("gen "):
+                msg = msg.replace("gen ", "")
+                gen = int(msg)-1
+                if gen not in range(0, 7):
+                    await message.channel.send("no such generation exists")
+                    return
+                genindex = [[1, 152], [152, 252], [252, 387], [387, 494], [494, 650], [650, 722], [722, 810]]
+                await message.channel.send("https://pokemondb.net/pokedex/" + str(np.random.randint(genindex[gen][0], genindex[gen][1])))
         
             
     #NON PREFIXED
