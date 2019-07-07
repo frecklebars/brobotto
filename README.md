@@ -11,6 +11,7 @@ command | description
 **b!** | **prefix used**
 hello | says `hello!` back
 color | returns a random color
+pokemon (optional: gen 1-7) | returns a random pokemon (from a certain generation if specified)
 isepic | tells you if something is epic or na
 bruh | certifies official bruh moment (tm)
   
