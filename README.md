@@ -1,6 +1,6 @@
 # brobotto, the bro for you and your bots  
   
-![aaaa](https://raw.githubusercontent.com/frecklebars/brobotto/master/bro.jpg)  
+![aaaa](https://raw.githubusercontent.com/frecklebars/brobotto/master/bruh.jpg)  
   
 a little something I made out of boredom.  
 it does a bunch of simple stuff, way more to come as I'm pretty passionate about this and wanna learn more about this.  
@@ -12,6 +12,7 @@ command | description
 hello | says `hello!` back
 color | returns a random color
 isepic | tells you if something is epic or na
+bruh | certifies official bruh moment (tm)
   
   
 ### other features:
