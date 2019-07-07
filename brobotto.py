@@ -79,8 +79,7 @@ async def on_message(message):
     if msg.find("bro") >= 0:
         ochance = np.random.randint(0, 5)
         dotchance = np.random.randint(0, 15)
-        if np.random.randint(0, 100) < 30:
-            await message.channel.send("bro" + "o" * ochance + "." * dotchance)
+        await message.channel.send("bro" + "o" * ochance + "." * dotchance)
         return
 
 
