@@ -1,19 +1,21 @@
 # brobotto, the bro for you and your bots  
   
+![aaaa](https://raw.githubusercontent.com/frecklebars/brobotto/master/bro.jpg)  
+  
 a little something I made out of boredom.  
 it does a bunch of simple stuff, way more to come as I'm pretty passionate about this and wanna learn more about this.  
 ### here's the list of commands:  
   
 command | description
 --- | ---
-b! | prefix used
+**b!** | **prefix used**
 hello | says `hello!` back
 color | returns a random color
 isepic | tells you if something is epic or na
   
   
 ### other features:
-* has a 5% chance of saying `why are you like this`
+* has a 5% chance of saying something witty that has a 100% chance of being something dumb
 * will brighten ur day if you type `:)`
 * replies to your `bro`s like the real bro he is
 * is cool B)
