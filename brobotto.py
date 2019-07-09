@@ -84,7 +84,8 @@ async def on_message(message):
                 msg = msg.replace("debug ", "")
                 if msg == "serverlist":
                     for server in client.guilds:
-                        print(server.name + "\n")
+                        print(server.name)
+                    return
             
     #NON PREFIXED
     msg = message.content.lower()
