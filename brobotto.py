@@ -77,7 +77,14 @@ async def on_message(message):
                     return
                 genindex = [[1, 152], [152, 252], [252, 387], [387, 494], [494, 650], [650, 722], [722, 810]]
                 await message.channel.send("https://pokemondb.net/pokedex/" + str(np.random.randint(genindex[gen][0], genindex[gen][1])))
-        
+                
+        #DEBUG
+        if message.author.name == "frecklebars" and message.author.id == 194384963615850496:
+            if msg.startswith("debug "):
+                msg = msg.replace("debug ", "")
+                if msg == "serverlist":
+                    for server in client.guilds:
+                        print(server.name + "\n")
             
     #NON PREFIXED
     msg = message.content.lower()
@@ -103,7 +110,6 @@ async def on_message(message):
         await message.channel.send("bro" + "o" * ochance + "." * dotchance)
         return
 
-
     #LAST
     if msg:
         check = np.random.randint(0,100)
@@ -117,6 +123,7 @@ async def on_ready():
     print("logged in as: " + str(client.user.name))
     print("id: " + str(client.user.id))
     print("----------------------")
-    print("yep, it's bro time")
+    print("yep, it's bro time\n")
+	
     
 client.run(TOKEN)
