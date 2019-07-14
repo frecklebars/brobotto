@@ -17,5 +17,7 @@ quotes = ["why are you like this",
           "oh god oh fuck",
           ":/",
           "shuf up libertarf",
-          "help where am i"
+          "help where am i",
+          "penis",
+          "sex"
           ]

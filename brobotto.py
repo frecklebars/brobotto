@@ -77,6 +77,9 @@ async def on_message(message):
                     return
                 genindex = [[1, 152], [152, 252], [252, 387], [387, 494], [494, 650], [650, 722], [722, 810]]
                 await message.channel.send("https://pokemondb.net/pokedex/" + str(np.random.randint(genindex[gen][0], genindex[gen][1])))
+                return
+        if msg == "help":
+            await message.channel.send("you can see the shid i do here:\nhttps://github.com/frecklebars/brobotto/blob/master/README.md")
                 
         #DEBUG
         if message.author.name == "frecklebars" and message.author.id == 194384963615850496:
@@ -106,6 +109,8 @@ async def on_message(message):
         await message.channel.send(":)")
             
     if msg.find("bro") >= 0:
+        if msg.find("brobotto") >= 0:
+            return
         ochance = np.random.randint(0, 5)
         dotchance = np.random.randint(0, 15)
         await message.channel.send("bro" + "o" * ochance + "." * dotchance)
