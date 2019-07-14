@@ -9,6 +9,7 @@ it does a bunch of simple stuff, way more to come as I'm pretty passionate about
 command | description
 --- | ---
 **b!** | **prefix used**
+help | literally what you'd expect it to do
 hello | says `hello!` back
 color | returns a random color
 pokemon (optional: gen 1-7) | returns a random pokemon (from a certain generation if specified)
