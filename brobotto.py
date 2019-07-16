@@ -98,9 +98,12 @@ async def on_message(message):
     #NON PREFIXED
     msg = message.content.lower()
     if msg == "see you later alligator":
-            await message.channel.send("in a while crocodile")
-            return
-        
+        await message.channel.send("in a while crocodile")
+        return
+    
+    if msg.find("69") >= 0:
+        await message.channel.send("nice")
+    
     if (msg.find("pee") >=0) or (msg.find("poo") >=0):
         msg = msg.split(" ")
         if "pee" in msg:
