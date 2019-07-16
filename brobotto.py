@@ -103,6 +103,7 @@ async def on_message(message):
     
     if msg.find("69") >= 0:
         await message.channel.send("nice")
+        return
     
     if (msg.find("pee") >=0) or (msg.find("poo") >=0):
         msg = msg.split(" ")
