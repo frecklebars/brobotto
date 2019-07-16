@@ -112,6 +112,7 @@ async def on_message(message):
     
     if msg.find(":)") >= 0:
         await message.channel.send(":)")
+        return
             
     if msg.find("bro") >= 0:
         if msg.find("brobotto") >= 0:
