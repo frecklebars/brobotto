@@ -80,6 +80,11 @@ async def on_message(message):
                 return
         if msg == "help":
             await message.channel.send("you can see the shid i do here:\nhttps://github.com/frecklebars/brobotto/blob/master/README.md")
+            return
+        
+        if msg == "sex":
+            await message.channel.send("https://www.youtube.com/watch?v=MUhxQ8dEr-w")
+            return
                 
         #DEBUG
         if message.author.name == "frecklebars" and message.author.id == 194384963615850496:
