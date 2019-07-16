@@ -19,5 +19,6 @@ quotes = ["why are you like this",
           "help where am i",
           "penis",
           "sex",
+          "valeu",
           "EVERY POSTS I HAVE EVER MADE ON THIS WEBSITE IS SATIRE. I DO NOT CONDONE NOR SUPPORT ANY OF THE OPINIONS EXPRESSED ON THIS IMAGEBOARD.\nAny post associated with this IP is satire and should be treated as such. At no point has anyone associated with this IP ever condoned, encouraged, committed or abated acts of violence or threats of violence against any persons, regardless of racial, ethnic, religious or cultural background.\nIn case of an investigation by any federal entity or similar, I do not have any involvement with this group or with the people in it, I do not know how I am here, probably added by a third party, I do not support any actions by the member of this website."
           ]
