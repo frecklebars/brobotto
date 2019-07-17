@@ -21,6 +21,9 @@ async def on_message(message):
         msg = message.content.lower()
         msg = msg.replace(prefix, "")
         
+        if np.random.ranint(0, 100) < 10:
+            return
+        
         if msg == "hello":
             await message.channel.send("hello!")
             return
