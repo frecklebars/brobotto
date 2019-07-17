@@ -106,6 +106,8 @@ async def on_message(message):
         return
     
     if msg.find("69") >= 0:
+        if msg.find("@") >= 0:
+            return
         await message.channel.send("nice")
         return
     
