@@ -9,6 +9,7 @@ TOKEN = ftoken.read()
 client = discord.Client()
 
 prefix = 'b!'
+excluded = ["etika", "bruh", "sex"]
 
 @client.event
 async def on_message(message):
@@ -22,8 +23,9 @@ async def on_message(message):
         msg = msg.replace(prefix, "")
         
         if np.random.randint(0, 100) < 10:
-            await message.channel.send("no")
-            return
+            if msg not in excluded:
+                await message.channel.send("no")
+                return
         
         if msg == "hello":
             await message.channel.send("hello!")
@@ -62,7 +64,7 @@ async def on_message(message):
                 return
             
         if msg == "bruh" or msg == "bruh moment":
-            await message.channel.send(file = discord.File("bruh.jpg"))
+            await message.channel.send(file = discord.File("bruh/bruh.jpg"))
             await message.channel.send("bruh")
             
         if msg == "pokemon":
@@ -82,12 +84,19 @@ async def on_message(message):
                 genindex = [[1, 152], [152, 252], [252, 387], [387, 494], [494, 650], [650, 722], [722, 810]]
                 await message.channel.send("https://pokemondb.net/pokedex/" + str(np.random.randint(genindex[gen][0], genindex[gen][1])))
                 return
+        
         if msg == "help":
             await message.channel.send("you can see the shid i do here:\nhttps://github.com/frecklebars/brobotto/blob/master/README.md")
             return
         
         if msg == "sex":
             await message.channel.send("https://www.youtube.com/watch?v=MUhxQ8dEr-w")
+            return
+        
+        if msg == "etika":
+            pic = np.random.randint(1, 44)
+            etikafile = "etika/" + str(pic) + ".jpg"
+            await message.channel.send(file = discord.File(etikafile, filename = "etika.jpg"))
             return
                 
         #DEBUG
