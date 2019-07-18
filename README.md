@@ -11,6 +11,7 @@ command | description
 **b!** | **prefix used**
 help | literally what you'd expect it to do
 hello | says `hello!` back
+etika | [remembering Etika](http://mvrf.cf/fly/etika) with a random image of him smiling :)
 color | returns a random color
 pokemon (optional: gen 1-7) | returns a random pokemon (from a certain generation if specified)
 isepic | tells you if something is epic or na
