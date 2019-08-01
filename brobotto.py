@@ -1,5 +1,6 @@
 import discord
 import numpy as np
+
 import brolines
 
 
@@ -97,6 +98,16 @@ async def on_message(message):
             pic = np.random.randint(1, 44)
             etikafile = "etika/" + str(pic) + ".jpg"
             await message.channel.send(file = discord.File(etikafile, filename = "etika.jpg"))
+            return
+        
+        if msg == "weather":
+            await message.channel.send("please specify a city")
+            return
+        if msg.startswith("weather "):
+            import weatherbro as wb
+            msg = msg.replace("weather ", "")
+            weatherreport = wb.getw(msg)
+            await message.channel.send(weatherreport)
             return
                 
         #DEBUG
