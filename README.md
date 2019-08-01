@@ -5,7 +5,7 @@
 a little something I made out of boredom.  
 it does a bunch of simple stuff, way more to come as I'm pretty passionate about this and wanna learn more.  
   
-[![forthebadge](https://forthebadge.com/images/badges/mom-made-pizza-rolls.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/approved-by-george-costanza.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/mom-made-pizza-rolls.svg)](https://forthebadge.com)  
 ### here's the list of commands:  
   
 command | description
