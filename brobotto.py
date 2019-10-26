@@ -100,6 +100,11 @@ async def on_message(message):
             await message.channel.send(file = discord.File(etikafile, filename = "etika.jpg"))
             return
         
+        if msg == "say":
+            line = np.random.randint(0, len(brolines.quotes))
+            await message.channel.send(brolines.quotes[line])
+            return
+        
         if msg == "weather":
             await message.channel.send("please specify a city")
             return

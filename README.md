@@ -13,6 +13,7 @@ command | description
 **b!** | **prefix used**
 help | literally what you'd expect it to do
 hello | says `hello!` back
+say | sends a random message from a set of lines (suggestions welcome on [twitter](https://twitter.com/frecklebars)!
 weather *city* | returns a weather report for given *city*
 etika | [remembering Etika](http://mvrf.cf/fly/etika) with a random image of him smiling :)
 color | returns a random color
