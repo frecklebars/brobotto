@@ -105,6 +105,13 @@ async def on_message(message):
             await message.channel.send(brolines.quotes[line])
             return
         
+        if msg == "judgement":
+            joshu = np.random.randint(0, 2)
+            if joshu == 1:
+                await message.channel.send(file = discord.File("img/joshu/epic.jpg"))
+            else:
+                await message.channel.send(file = discord.File("img/joshu/cringe.png"))
+        
         if msg == "weather":
             await message.channel.send("please specify a city")
             return

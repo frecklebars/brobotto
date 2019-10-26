@@ -20,6 +20,7 @@ color | returns a random color
 pokemon (optional: gen 1-7) | returns a random pokemon (from a certain generation if specified)
 isepic | tells you if something is epic or na
 bruh | certifies official bruh moment (tm)
+judgement | joshu will now judge you
 sex | im sorry its dumb, its not inappropriate, just dumb
   
   
