@@ -124,6 +124,9 @@ async def on_message(message):
                 
         #DEBUG
         if message.author.name == "frecklebars" and message.author.id == 194384963615850496:
+            if msg == "kill":
+                await message.channel.send(":(")
+                exit()
             if msg.startswith("debug "):
                 msg = msg.replace("debug ", "")
                 if msg == "serverlist":
