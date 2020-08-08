@@ -24,7 +24,7 @@ sex | im sorry its dumb, its not inappropriate, just dumb
   
   
 ### other features:
-* has a 5% chance of saying something witty that has a 100% chance of being something dumb
+* has a slight chance of saying something witty that has a 100% chance of being something dumb
 * will brighten ur day if you type `:)`
 * replies to your `bro`s like the real bro he is
 * says `nice` when he needs to
