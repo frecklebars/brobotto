@@ -44,3 +44,18 @@ lfgVariants = ["lets fucking go",
                "lets fuckin go",
                "let's fuckin go",
                ]
+
+reactEmojisBroHaus = ["gold","gold","gold","gold","gold","gold","gold","gold","gold","gold","gold","gold",
+                      "gold","gold","gold","gold","gold","gold","gold","gold","gold","gold","gold","gold",
+                      "bosnia","bosnia","bosnia","bosnia","bosnia","bosnia",
+                      "POG",
+                      "usami",
+                      "miu","miuu",
+                      "men",
+                      "somethingwrong",
+                      "saddoge",
+                      "pissed",
+                      "furious",
+                      "delicious",
+                      "content",
+                      "dogewithit"]

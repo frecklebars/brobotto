@@ -1,4 +1,5 @@
 import discord
+import random
 import numpy as np
 
 import brolines
@@ -11,6 +12,10 @@ client = discord.Client()
 
 prefix = 'b!'
 excluded = ["etika", "bruh", "sex"]
+
+BRO_HAUS_ID = 387676518077300736
+BTTRDTST_ID = 727537357502283778
+FRECKLEBARS_ID = 194384963615850496
 
 @client.event
 async def on_message(message):
@@ -126,7 +131,7 @@ async def on_message(message):
             return
                 
         #DEBUG
-        if message.author.name == "frecklebars" and message.author.id == 194384963615850496:
+        if message.author.id == FRECKLEBARS_ID:
             if msg == "kill":
                 await message.channel.send(":(")
                 exit()
@@ -180,10 +185,20 @@ async def on_message(message):
     
     for lfg in brolines.lfgVariants:
         if msg.find(lfg) >= 0:
+            if np.random.randint(0, 100) < 30:
+                await message.channel.send("go where")
+                return
             lfgOCnt = np.random.randint(7, 30)
             await message.channel.send("LETS FUCKING GO" + "O" * lfgOCnt)
             return
 
+    #BRO HAUS SPECIFIC
+    if message.guild.id == BRO_HAUS_ID:
+        if np.random.randint(0, 100) < 3:
+            emoji = discord.utils.get(message.guild.emojis, name=random.choice(brolines.reactEmojisBroHaus))
+            if emoji:
+                await message.add_reaction(emoji)
+    
     #LAST
     if msg:
         check = np.random.randint(0,1000)
