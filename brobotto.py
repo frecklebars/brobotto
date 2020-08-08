@@ -68,23 +68,25 @@ async def on_message(message):
             await message.channel.send(file = discord.File("bruh.jpg"))
             await message.channel.send("bruh")
             
+        """
         if msg == "pokemon":
-            await message.channel.send("https://pokemondb.net/pokedex/" + str(np.random.randint(1, 810)))
+            await message.channel.send("https://pokemondb.net/pokedex/" + str(np.random.randint(1, 894)))
             return
         if msg.startswith("pokemon "):
             msg = msg.replace("pokemon ", "")
-            if msg == "gen":
+            if msg == "gen" or msg == "gen ":
                 await message.channel.send("you need to specify a generation from 1 to 8\nfor example `b!pokemon gen 4`")
                 return
             if msg.startswith("gen "):
                 msg = msg.replace("gen ", "")
                 gen = int(msg)-1
-                if gen not in range(0, 7):
+                if gen not in range(0, 8):
                     await message.channel.send("no such generation exists")
                     return
-                genindex = [[1, 152], [152, 252], [252, 387], [387, 494], [494, 650], [650, 722], [722, 810]]
+                genindex = [[1, 152], [152, 252], [252, 387], [387, 494], [494, 650], [650, 722], [722, 810], [810, 894]]
                 await message.channel.send("https://pokemondb.net/pokedex/" + str(np.random.randint(genindex[gen][0], genindex[gen][1])))
                 return
+        """
         
         if msg == "help":
             await message.channel.send("you can see the shid i do here:\nhttps://github.com/frecklebars/brobotto/blob/master/README.md")
@@ -129,9 +131,13 @@ async def on_message(message):
                 exit()
             if msg.startswith("debug "):
                 msg = msg.replace("debug ", "")
+                if msg == "ping":
+                    await message.channel.send("poong")
                 if msg == "serverlist":
+                    print("===current servers im in===")
                     for server in client.guilds:
                         print(server.name)
+                    print("===========================")
                     return
             
     #NON PREFIXED
@@ -166,6 +172,16 @@ async def on_message(message):
         dotchance = np.random.randint(0, 15)
         await message.channel.send("bro" + "o" * ochance + "." * dotchance)
         return
+    
+    if msg.find("based") >= 0 and msg.find("based on what") == -1:
+        await message.channel.send("based on what")
+        return
+    
+    for lfg in brolines.lfgVariants:
+        if msg.find(lfg) >= 0:
+            lfgOCnt = np.random.randint(7, 30)
+            await message.channel.send("LETS FUCKING GO" + "O" * lfgOCnt)
+            return
 
     #LAST
     if msg:
