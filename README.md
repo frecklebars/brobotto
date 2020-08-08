@@ -13,11 +13,10 @@ command | description
 **b!** | **prefix used**
 help | literally what you'd expect it to do
 hello | says `hello!` back
-say | sends a random message from a set of lines (suggestions welcome on [twitter](https://twitter.com/frecklebars)!
+say | sends a random message from a set of lines (suggestions welcome on [twitter](https://twitter.com/frecklebars)!)
 weather *city* | returns a weather report for given *city*
-etika | [remembering Etika](http://mvrf.cf/fly/etika) with a random image of him smiling :)
+etika | [remembering Etika](https://twitter.com/EtikaMemories) with a random image of him smiling :)
 color | returns a random color
-pokemon (optional: gen 1-7) | returns a random pokemon (from a certain generation if specified)
 isepic | tells you if something is epic or na
 bruh | certifies official bruh moment (tm)
 judgement | joshu will now judge you
@@ -29,9 +28,14 @@ sex | im sorry its dumb, its not inappropriate, just dumb
 * will brighten ur day if you type `:)`
 * replies to your `bro`s like the real bro he is
 * says `nice` when he needs to
+* asks for the basis
+* fucking goes
 * is cool B)
   
   
 ## but how can I delight in the honor of inviting brobotto to my server??
 easy, click on the [INVITE LINK](https://discordapp.com/api/oauth2/authorize?client_id=597062511929589790&permissions=125952&scope=bot)  
 or tell your server admin to do it idk
+
+### notes
+removed the pokemon feature for a while cos i didnt like it and i wanna make one that uses the [poke api](https://pokeapi.co/)
