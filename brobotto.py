@@ -56,12 +56,13 @@ async def on_message(message):
             await message.channel.send("what is epic?")
             return
         if msg.startswith("isepic"):
+            msg = msg.replace("isepic ", "")
             chance = np.random.randint(0,2)
             if chance == 1:
-                await message.channel.send("ok this is epic")
+                await message.channel.send("ok " + msg + " is epic")
                 return
             else:
-                await message.channel.send("ok this is not epic")
+                await message.channel.send("ok " + msg + " is not epic")
                 return
             
         if msg == "bruh" or msg == "bruh moment":
@@ -185,8 +186,8 @@ async def on_message(message):
 
     #LAST
     if msg:
-        check = np.random.randint(0,100)
-        if check < 5:
+        check = np.random.randint(0,1000)
+        if check < 7:
             line = np.random.randint(0, len(brolines.quotes))
             await message.channel.send(brolines.quotes[line])
         return
