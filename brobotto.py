@@ -1,6 +1,7 @@
 import discord
 import random
 import numpy as np
+import time
 
 import brolines
 
@@ -13,14 +14,23 @@ client = discord.Client()
 prefix = 'b!'
 excluded = ["etika", "bruh", "sex"]
 
+excluded_channels = [388977036443779072]
+
 BRO_HAUS_ID = 387676518077300736
 BTTRDTST_ID = 727537357502283778
 FRECKLEBARS_ID = 194384963615850496
 
 @client.event
 async def on_message(message):
+    
+    #no instant reply
+    time.sleep(0.15)
+        
     #ignore himself
     if message.author == client.user:
+        return
+    
+    if message.channel.id in excluded_channels:
         return
     
     #PREFIXED COMMANDS
@@ -57,10 +67,10 @@ async def on_message(message):
             await message.channel.send("https://www.color-hex.com/color/" + linkrgb)
             return
         
-        if msg == "isepic":
+        if msg in ["isepic", "is epic"]:
             await message.channel.send("what is epic?")
             return
-        if msg.startswith("isepic"):
+        if msg.startswith("isepic") or msg.startswith("is epic"):
             msg = msg.replace("isepic ", "")
             chance = np.random.randint(0,2)
             if chance == 1:
@@ -108,7 +118,7 @@ async def on_message(message):
             await message.channel.send(file = discord.File(etikafile, filename = "etika.jpg"))
             return
         
-        if msg == "say":
+        if msg == "await message.channel.send":
             line = np.random.randint(0, len(brolines.quotes))
             await message.channel.send(brolines.quotes[line])
             return
@@ -139,12 +149,18 @@ async def on_message(message):
                 msg = msg.replace("debug ", "")
                 if msg == "ping":
                     await message.channel.send("poong")
+                    
                 if msg == "serverlist":
                     print("===current servers im in===")
                     for server in client.guilds:
                         print(server.name)
                     print("===========================")
                     return
+                
+                if msg == "spitid":
+                    await message.channel.send(message.channel.id)
+                    return
+                
             
     #NON PREFIXED
     msg = message.content.lower()
@@ -153,10 +169,9 @@ async def on_message(message):
         return
     
     if msg.find("69") >= 0:
-        if msg.find("@") >= 0:
+        if "69" in msg.split():
+            await message.channel.send("nice")
             return
-        await message.channel.send("nice")
-        return
     
     if (msg.find("pee") >=0) or (msg.find("poo") >=0):
         msg = msg.split(" ")
